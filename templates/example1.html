@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title%}Data{% endblock%} {% block
+    content%}
+    <h1 class="text-secondary" align="">Example1</h1>
+    <p class="">
+      Pulling in Data using the extend Template
+    </p>
+    
+    <br />
+    
+    <div class="container">
+        <h2>DataTables Example</h2>
+        <table id="example1" class="display compact hover" style="width:50%">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Event</th>
+                    <th>Person</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for row in data_t %}
+                <tr>
+                    <td>{{ row['year'] }}</td>
+                    <td>{{ row['event'] }}</td>
+                    <td>{{ row['as'] }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            
+
+        </table>
+    </div>
+
+
+    {% endblock %}
